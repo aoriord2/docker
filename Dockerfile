@@ -8,4 +8,8 @@ WORKDIR /app
 
 RUN npm install --omit=dev
 
-ENTRYPOINT [ “npm”, “start”, “-p”, “80” ]
+# Expose port 80
+EXPOSE 80
+
+# Start the application
+ENTRYPOINT [ "npm", "start" ]
